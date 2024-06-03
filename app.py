@@ -46,6 +46,10 @@ def docker_view():
         return redirect(url_for('login'))
     return render_template('docker_view.html')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 @app.route('/logout')
 def logout():
     session.pop('username', None)
