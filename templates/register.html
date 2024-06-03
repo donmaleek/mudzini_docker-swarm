@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muudzini Docker Swarm</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+</head>
+<body>
+    <div class="Container">
+        <div class="Header">
+            <h2>MUDZINI DOCKER SWARM</h2>
+        </div>
+        <div class="Mainsub">
+            <img src="{{ url_for('static', filename='images/Dockerlogo.webp') }}" alt="Docker Logo">
+        </div>
+        <form action="{{ url_for('register') }}" method="post">
+            <div class="Content">
+                <div class="Deck">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br><br>
+                    <button type="submit" class="Button">REGISTER</button>
+                </div>
+            </div>
+        </form>
+        <div class="Buttons">
+            <p>Already have an account?</p>
+            <button class="Button" onclick="window.location.href='/login'">LOG IN</button>
+        </div>
+    </div>
+    <footer class="Footer">
+    <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="https://www.docker.com/legal/docker-privacy-policy" target="_blank">Privacy Policy</a></li>
+        <li><a href="https://www.docker.com/legal/docker-terms-service" target="_blank">Terms of Service</a></li>
+    </ul>
+</footer>
+
+</body>
+</html>
+

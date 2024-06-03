@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudzini Docker Swarm</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+    <style>
+        .Container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .SocialLinks {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .SocialLinks ul {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .SocialLinks li {
+            display: inline-block;
+        }
+        .SocialLinks img {
+            width: 30px; /* Adjust the size of the icons */
+            height: auto;
+            vertical-align: middle;
+        }
+        .Header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .Footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .DockerLogo {
+            text-align: center;
+            margin-top: 50px; /* Adjust as needed */
+        }
+        .DockerLogo img {
+            width: 150px; /* Adjust the size of the image */
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="Container">
+        <div class="SocialLinks">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/mathiasmramba/" target="_blank"><img src="{{ url_for('static', filename='images/linked.jpeg') }}" alt="LinkedIn"></a></li>
+                <li><a href="https://twitter.com/engmathiasmramb" target="_blank"><img src="{{ url_for('static', filename='images/twitter-im.jpeg') }}" alt="Twitter"></a></li>
+                <li><a href="https://github.com/donmaleek/mudzini_docker-swarm" target="_blank"><img src="{{ url_for('static', filename='images/github.jpeg') }}" alt="GitHub"></a></li>
+            </ul>
+        </div>
+        <div class="DockerLogo">
+            <img src="{{ url_for('static', filename='images/Dockerlogo.webp') }}" alt="Docker Logo">
+        </div>
+        <div class="Header">
+            <h2>About Mudzini Docker Swarm</h2>
+        </div>
+        <div class="Content">
+            <!-- Your content here -->
+            <div class="AboutSection">
+                <h3>What is Mudzini Docker Swarm?</h3>
+                <p>Mudzini Docker Swarm is a powerful platform that helps developers build, share, run, and verify applications efficiently. It accelerates application development by simplifying the environment configuration and management process.</p>
+            </div>
+            <div class="AboutSection">
+                <h3>Benefits of Using Docker Swarm</h3>
+                <ul>
+                    <li><strong>Scalability:</strong> Easily scale applications across multiple hosts.</li>
+                    <li><strong>Simplicity:</strong> Simple commands to manage and deploy services.</li>
+                    <li><strong>High Availability:</strong> Ensures your applications are always available.</li>
+                    <li><strong>Load Balancing:</strong> Automatically distributes traffic across containers.</li>
+                    <li><strong>Security:</strong> Offers built-in security features to protect your applications.</li>
+                </ul>
+            </div>
+            <div class="AboutSection">
+                <h3>Why Choose Mudzini Docker Swarm?</h3>
+                <p>Mudzini Docker Swarm is trusted by developers and chosen by Fortune 100 companies. It offers a suite of development tools, services, trusted content, and automations to accelerate the delivery of secure applications. Whether you are managing containers, servers, or services, Mudzini Docker Swarm provides the tools you need to streamline your operations.</p>
+            </div>
+            <div class="AboutSection">
+                <h3>Project Inspiration</h3>
+                <p>This project was inspired by Holberton School as a portfolio project. Holberton School is known for its rigorous and practical approach to software engineering education, and this project embodies the skills and knowledge gained through that program. It showcases the application of Docker Swarm in real-world scenarios, emphasizing the importance of containerization and orchestration in modern software development.</p>
+            </div>
+            <div class="AboutSection">
+                <h3>Get Involved</h3>
+                <p>Ready to get your hands dirty? Join the Mudzini Docker Swarm project and start experiencing the benefits of containerization. Contribute to our GitHub repository, follow us on Twitter for updates, and connect with us on LinkedIn to stay in the loop.</p>
+            </div>
+        </div>
+        <footer class="Footer">
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="https://www.docker.com/legal/docker-privacy-policy" target="_blank">Privacy Policy</a></li>
+                <li><a href="https://www.docker.com/legal/docker-terms-service" target="_blank">Terms of Service</a></li>
+            </ul>
+        </footer>
+    </div>
+</body>
+</html>
+

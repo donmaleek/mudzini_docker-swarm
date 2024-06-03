@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudzini Docker Swarm</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+</head>
+<body>
+    <div class="Container">
+        <div class="Header">
+            <h2>MUDZINI DOCKER SWARM</h2>
+        </div>
+        <div class="Mainsub">
+            <img src="{{ url_for('static', filename='images/Dockerlogo.webp') }}" alt="Docker Logo">
+        </div>
+        <div class="Content">
+            <h2>Welcome Aboard Mudzini docker swarm</h2>
+            <p>What is mudzini Docker swarm?
+                Accelerate how you build, share, and run applications<br>
+                mudzini docker swarm helps developers build, share, run, and verify applications <br> anywhere without tedious environment configuration or management.</p>
+                <h3>Why use mudzini Docker swarm?</h3><br>
+                <p>Trusted by developers. Chosen by Fortune 100 companies.<br>
+                We provide a suite of development tools, services, trusted content, and automations.<br>
+                It can be used individually or together, to accelerate the delivery of secure applications.<br>
+                Through us, you can manage your various containers, servers, services and so much more!</p>
+            <div class="Buttons">
+                <h3>Ready to get your hands dirty!? Let's Go!</h3>
+                <button class="Button" onclick="location.href='/register'">Register</button>
+                <button class="Button" onclick="location.href='/login'">Login</button>
+            </div>
+        </div>
+        <footer class="Footer">
+    <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="https://www.docker.com/legal/docker-privacy-policy" target="_blank">Privacy Policy</a></li>
+        <li><a href="https://www.docker.com/legal/docker-terms-service" target="_blank">Terms of Service</a></li>
+    </ul>
+</footer>
+
+    </div>
+</body>
+</html>
+

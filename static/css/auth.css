@@ -1,0 +1,102 @@
+/* auth.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.Container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.Header {
+    text-align: center;
+    color: #007bff;
+}
+
+.Mainsub img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100px;
+}
+
+.Content {
+    padding: 20px;
+}
+
+.Deck label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.Deck input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.Button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.Button:hover {
+    background-color: #0056b3;
+}
+
+.Buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.Footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
+
+.Footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.Footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.Footer ul li a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.Footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.EmbeddedFrame {
+    width: 100%;
+    height: 600px;
+    border: none;
+    margin-top: 20px;
+}
+

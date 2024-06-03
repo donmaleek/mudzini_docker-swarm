@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudzini docker swarm </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
+    <style>
+        .Container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .Header, .Buttons {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .EmbeddedFrame {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+        .Footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
+        .Footer ul {
+            list-style: none;
+            padding: 0;
+        }
+        .Footer ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        .Footer ul li a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .Footer ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        function autoLogin() {
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = 'http://192.168.33.10:9000/#!/login';
+            form.target = 'dockerFrame';
+
+            const usernameInput = document.createElement('input');
+            usernameInput.type = 'hidden';
+            usernameInput.name = 'username';
+            usernameInput.value = 'mathayo77';
+            form.appendChild(usernameInput);
+
+            const passwordInput = document.createElement('input');
+            passwordInput.type = 'hidden';
+            passwordInput.name = 'password';
+            passwordInput.value = 'salamanzisa1985';
+            form.appendChild(passwordInput);
+
+            document.body.appendChild(form);
+            form.submit();
+        }
+    </script>
+</head>
+<body onload="autoLogin()">
+    <div class="Container">
+        <div class="Header">
+            <h2>MUDZINI DOCKER SWARM</h2>
+        </div>
+        <iframe name="dockerFrame" class="EmbeddedFrame" src="http://192.168.33.10:9000/#!/home"></iframe>
+        <div class="Buttons">
+            <button class="Button" onclick="window.location.href='/logout'">Logout</button>
+        </div>
+<div>
+        
+<footer class="Footer">
+    <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="https://www.docker.com/legal/docker-privacy-policy" target="_blank">Privacy Policy</a></li>
+        <li><a href="https://www.docker.com/legal/docker-terms-service" target="_blank">Terms of Service</a></li>
+    </ul>
+</footer>
+
+
+   </div>
+</body>
+</html>
+
