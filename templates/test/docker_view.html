@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mudzini docker swarm</title>
+    <title>Mudzini docker swarm </title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
     <style>
         .Container {
@@ -47,8 +47,6 @@
     </style>
     <script>
         function autoLogin() {
-            console.log("Starting auto-login process");
-
             const form = document.createElement('form');
             form.method = 'POST';
             form.action = 'https://34.204.82.108:9443/#!/login';
@@ -56,22 +54,18 @@
 
             const usernameInput = document.createElement('input');
             usernameInput.type = 'hidden';
-            usernameInput.name = 'username';  // Ensure this matches the actual form field name on the login page
+            usernameInput.name = 'admin';
             usernameInput.value = 'salamanzisa1985';
             form.appendChild(usernameInput);
 
             const passwordInput = document.createElement('input');
             passwordInput.type = 'hidden';
-            passwordInput.name = 'password';  // Ensure this matches the actual form field name on the login page
+            passwordInput.name = 'password';
             passwordInput.value = 'salamanzisa1985';
             form.appendChild(passwordInput);
 
-            console.log("Form created with username and password");
-
             document.body.appendChild(form);
             form.submit();
-
-            console.log("Form submitted for auto login");
         }
     </script>
 </head>
@@ -84,15 +78,20 @@
         <div class="Buttons">
             <button class="Button" onclick="window.location.href='/logout'">Logout</button>
         </div>
-    </div>
-    <footer class="Footer">
-        <ul>
-            <li><a href="{{ url_for('home') }}">Home</a></li>
-            <li><a href="{{ url_for('about') }}">About</a></li>
-            <li><a href="{{ url_for('privacy') }}">Privacy Policy</a></li>
-            <li><a href="{{ url_for('terms') }}">Terms of Service</a></li>
-        </ul>
-    </footer>
+<div>
+        
+<footer class="Footer">
+    	<ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('privacy') }}">Privacy Policy</a></li>
+                <li><a href="{{ url_for('terms') }}">Terms of Service</a></li>
+            </ul>
+    
+</footer>
+
+
+   </div>
 </body>
 </html>
 

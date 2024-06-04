@@ -47,27 +47,26 @@
     </style>
     <script>
         function autoLogin() {
-            console.log("Starting auto-login process");
-
+            // Create a form dynamically
             const form = document.createElement('form');
             form.method = 'POST';
             form.action = 'https://34.204.82.108:9443/#!/login';
             form.target = 'dockerFrame';
 
+            // Create hidden input elements
             const usernameInput = document.createElement('input');
             usernameInput.type = 'hidden';
-            usernameInput.name = 'username';  // Ensure this matches the actual form field name on the login page
-            usernameInput.value = 'salamanzisa1985';
+            usernameInput.name = 'username'; // Assuming the correct input name is 'username'
+            usernameInput.value = 'admin';
             form.appendChild(usernameInput);
 
             const passwordInput = document.createElement('input');
             passwordInput.type = 'hidden';
-            passwordInput.name = 'password';  // Ensure this matches the actual form field name on the login page
+            passwordInput.name = 'password'; // Assuming the correct input name is 'password'
             passwordInput.value = 'salamanzisa1985';
             form.appendChild(passwordInput);
 
-            console.log("Form created with username and password");
-
+            // Append form to the body and submit it
             document.body.appendChild(form);
             form.submit();
 

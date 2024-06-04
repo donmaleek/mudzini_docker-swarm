@@ -67,32 +67,35 @@ body {
     margin-top: 20px;
 }
 
+
 .Footer {
     text-align: center;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-top: 1px solid #e9ecef;
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #f8f8f8;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
 }
 
 .Footer ul {
-    list-style: none;
+    list-style-type: none;
+    margin: 0;
     padding: 0;
 }
 
-.Footer ul li {
+.Footer li {
     display: inline;
-    margin: 0 10px;
+    margin-right: 15px;
 }
 
-.Footer ul li a {
+.Footer a {
     text-decoration: none;
-    color: #007bff;
+    color: #000;
+    font-weight: bold;
 }
 
-.Footer ul li a:hover {
+.Footer a:hover {
     text-decoration: underline;
 }
-
 .EmbeddedFrame {
     width: 100%;
     height: 600px;

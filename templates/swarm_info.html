@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Swarm Information</title>
+</head>
+<body>
+  <h1>Docker Swarm Nodes</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Platform</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for node in nodes %}
+      <tr>
+        <td>{{ node.id }}</td>
+        <td>{{ node.attrs['Name'] }}</td>
+        <td>{{ node.status['State']['Status'] }}</td>
+        <td>{{ node.attrs['Platform']['OS'] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
+
