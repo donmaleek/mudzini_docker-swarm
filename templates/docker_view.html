@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mudzini docker swarm</title>
+    <title>Mudzini Docker Swarm</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/auth.css') }}">
     <style>
         .Container {
@@ -46,32 +46,36 @@
         }
     </style>
     <script>
-        function autoLogin() {
+        async function autoLogin() {
             console.log("Starting auto-login process");
 
-            const form = document.createElement('form');
-            form.method = 'POST';
-            form.action = 'https://34.204.82.108:9443/#!/login';
-            form.target = 'dockerFrame';
+            const loginUrl = 'https://34.204.82.108:9444/api/auth';
+            const credentials = {
+                username: 'mudzini',
+                password: 'salamanzisa1985'
+            };
 
-            const usernameInput = document.createElement('input');
-            usernameInput.type = 'hidden';
-            usernameInput.name = 'username';  // Ensure this matches the actual form field name on the login page
-            usernameInput.value = 'salamanzisa1985';
-            form.appendChild(usernameInput);
+            try {
+                const response = await fetch(loginUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(credentials)
+                });
 
-            const passwordInput = document.createElement('input');
-            passwordInput.type = 'hidden';
-            passwordInput.name = 'password';  // Ensure this matches the actual form field name on the login page
-            passwordInput.value = 'salamanzisa1985';
-            form.appendChild(passwordInput);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
 
-            console.log("Form created with username and password");
+                const data = await response.json();
+                console.log('Login successful:', data);
 
-            document.body.appendChild(form);
-            form.submit();
-
-            console.log("Form submitted for auto login");
+                // Assuming successful login redirects to /home
+                document.querySelector('.EmbeddedFrame').src = 'https://34.204.82.108:9444/#!/home';
+            } catch (error) {
+                console.error('Error during auto-login:', error);
+            }
         }
     </script>
 </head>
@@ -80,8 +84,9 @@
         <div class="Header">
             <h2>MUDZINI DOCKER SWARM</h2>
         </div>
-        <iframe name="dockerFrame" class="EmbeddedFrame" src="https://34.204.82.108:9443/#!/home"></iframe>
+        <iframe name="dockerFrame" class="EmbeddedFrame" src="https://34.204.82.108:9444/#!/home"></iframe>
         <div class="Buttons">
+            <p>In case of loading issues, use: <b>username:</b> mudzini <b>pass:</b> salamanzisa1985</p>
             <button class="Button" onclick="window.location.href='/logout'">Logout</button>
         </div>
     </div>

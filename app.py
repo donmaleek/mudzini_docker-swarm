@@ -1,6 +1,10 @@
 from flask import Flask, render_template, redirect, url_for, request, session
+from flask_cors import CORS
 
-app = Flask(__name__)
+
+app =Flask(__name__)
+CORS(app)  # Enable CORS for all routes
+
 app.secret_key = 'your_secret_key'
 
 # Dummy user data for illustration purposes
